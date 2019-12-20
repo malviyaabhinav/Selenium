@@ -1,0 +1,8 @@
+illegalStaleException: The path to the driver and corresponding key name must be set properly.
+WebDriverException: eg. Browser not connecting webpage. Server error.
+NoSuchSessionException: ==> Session ID is null. Using WebDriver after calling quit()
+						==> invalid session id. comes when Using WebDriver after calling close()
+						
+NoSuchElementException  ==> Unable to locate element:
+InvalidSelectorException==> invalid selector: Unable to locate an element with the xpath expression
+						
