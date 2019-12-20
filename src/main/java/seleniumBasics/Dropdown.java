@@ -24,9 +24,9 @@ public class Dropdown {
 		 * selectByVisibleText(year, "1992");
 		 */
 		
-		selectByVisibleText(day, "26");
-		selectByVisibleText(month, "12");
-		selectByVisibleText(year, "50");
+		selectByIndex(day, 26);
+		selectByIndex(month, 8);
+		selectByIndex(year, 4);
 		
 	}
 	
