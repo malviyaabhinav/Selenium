@@ -5,4 +5,4 @@ NoSuchSessionException: ==> Session ID is null. Using WebDriver after calling qu
 						
 NoSuchElementException  ==> Unable to locate element:
 InvalidSelectorException==> invalid selector: Unable to locate an element with the xpath expression
-						
+ElementNotInteractableException	==> Element is present in DOM, but not in a state to be interacted with				
