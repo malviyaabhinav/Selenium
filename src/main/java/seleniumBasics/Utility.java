@@ -1,12 +1,16 @@
 package seleniumBasics;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -55,13 +59,24 @@ public class Utility {
 	public static WebElement getElement(WebDriver driver, By locator) {
 		WebElement element = null;
 		try {
+			waitForElement(driver,locator);
 			element = driver.findElement(locator);
 		} catch (Exception e) {
 			System.out.println("Some error happened in creating element..." + e.getMessage());
 		}
 		return element;
 	}
-
+	
+	/**
+	 * This methods waits 15 seconds for element to be present on the page
+	 * @param driver
+	 * @param locator
+	 */
+	public static void waitForElement(WebDriver driver, By locator) {
+		WebDriverWait wait=new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));		
+	}
+	
 	/**
 	 * This method is used to launch URL
 	 * 
