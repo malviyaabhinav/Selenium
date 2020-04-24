@@ -1,0 +1,75 @@
+
+//htmltag[@property='value']
+
+	e.g.: 	//input[@id='username']
+		   //input[@id='username' and @type='email']		==> Using Operator AND
+		   //input[@class='form-control private-form__control login-email']
+		   (//input[@class='form-control'])[1]				==> Using Indexing in Xpath. Use bracket and then index.
+		   (//input[@class='form-control'])[position()=1]	==> Using Position function for Indexing in Xpath.
+		   (//input[@type='text'])[last()]		==> Takes to the last element of Xpath collection.
+		   //input[contains(@id,'text_')]		==> When Xpath is Dynamic. Use Contains Function. It takes the property and static value as parameter.
+		   //input[contains(@id,'user') and @type='email']		==> Contains with AND Operator.
+		   //input[contains(@id,'user') and contains(@class,'form')]	==> Using two Contains with AND operator
+		   //span[text()='Set up your HubSpot account']   		==> Xpath with Text. USeful for Headers, Error/Confirmation messages.
+		   //input[contains(text(),'automationlabs_')]		   ==> Contains with Text
+		   //a[contains(text(),'Sign Up')]			==> Link(Anchor Tag) with Contains and Text
+		   //input[starts-with(@class,'accou__')]	==> Xpath with Starts with text
+		   //input[ends-with(@class,'_name')]		==> Xpath with Ends with text
+		   
+		   Parent-Child XPATH:
+		   
+		   Refer: https://www.w3schools.com/xml/xpath_axes.asp
+		  		   
+		   / ==> Gives Direct Child of element
+		   // ==> Gives all the elements under 
+		   		e.g.: //html/body/div/	==> 1 element (When body has only One Direct Div. Returns only direct child div)
+		   			 //html/body//div  ==> 10 elements (It returns all the div that are under body including grandchildren)
+		   			 
+		   //div[@class='input-group']//following::input[@name='username']    ==> Selects everything in the document after the closing tag of the current node
+		   //input[@name='password']//preceding::div  ==> 	Selects all nodes that appear before the current node in the document, except ancestors, attribute nodes and namespace nodes
+		   //input[@name='password']/../../..			==> /.. it is used for Reverese traversing. It takes you to the parent element
+		   //input[@name='password']//preceding-sibling::div		==>To select the preceding sibling element
+		   //input[@name='password']//following-sibling::div		==>To select the following sibling element
+		   //span[text()='Mauli Malviya']//ancestor::td   ==> Ancestor is used to select parent/grandparent of element. Useful in traversing in webtables
+		   //span[text()='Mauli Malviya']//ancestor::td//preceding-sibling::td//input[@type='checkbox']   ==> Eg. to traverse xpath in Webtable... going Up and down the DOM
+		   //span[text()='Mauli Malviya']//child::td		==> To select child td element
+		   //span[text()='Mauli Malviya']//parent::div		==> To select parent div element
+		   
+		   
+		   =======================================================================================================================================================================
+		   CSS Selector:
+		   
+		   When id is available. Use Hash with id #
+		   #id
+		   	for eg. ==> #username 
+		   				input#username
+		   				input[id='username']
+		   				input[id='username'][type='email'] 		==> There is no AND operator used in CSS selector.
+		   				
+		   				
+		   	When Class is available. Use dot with classname .
+		   	.classname
+		   		for e.g.  ==> .classname
+		   						input.login-email
+		   						button.uiButton.private-button.private-button__link.private-button--default>span  ==> Hierarchy in CSS is done using '>'
+		   						input[id^='user'] 		==> Starts-with. Use ^ symbol
+		   						input[id$='name']		==> Ends-with. Use $ symbol
+		   						input[id*='name']		==> Contains. Use * symbol
+		   						
+		   						
+		   						
+		   						
+		   						
+		   						
+		   						
+		   						
+		   						
+		   						
+		   						
+		   						
+		   						
+		   	
+		   			
+			
+		   
+		   

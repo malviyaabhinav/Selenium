@@ -22,9 +22,9 @@ public class WebDriverManagerIndependent {
 		 */
 	
 		WebDriverManager.chromedriver().setup();
-		WebDriverManager.firefoxdriver().setup();
-//		WebDriver driver = new ChromeDriver();
-		WebDriver driver = new FirefoxDriver();
+//		WebDriverManager.firefoxdriver().setup();
+		WebDriver driver = new ChromeDriver();
+//		WebDriver driver = new FirefoxDriver();
 		
 		
 	//Enter URL:
